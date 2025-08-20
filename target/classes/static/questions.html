@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DevExchange - Questions</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="questions-page">
+
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+    <h2 class="sidebar-title">DevExchange</h2>
+
+    <ul class="nav-links">
+        <li><a href="view-profile.html">Home</a></li>
+        <li><a class="active" href="questions.html">Questions</a></li>
+    </ul>
+
+    <div class="sidebar-bottom">
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+</div>
+
+<!-- Main Content Area -->
+<div class="main-content">
+    <div class="questions-container">
+
+        <!-- Page Header -->
+        <div class="page-header" style="margin-bottom: 30px;">
+            <h1>Questions</h1>
+            <p>Ask and explore tech questions from other users.</p>
+        </div>
+
+        <!-- Ask a Question Form -->
+        <div class="question-form">
+            <h2>Ask a Question</h2>
+            <input type="text" id="questionTitle" placeholder="Title: e.g., How do I use Spring Boot with MySQL?" />
+            <textarea id="questionBody" rows="5" placeholder="Describe your question in more detail..."></textarea>
+
+            <!-- Tag Selection -->
+            <label for="tagsSelect">Tags (Hold CTRL to select multiple) :</label>
+            <select id="tagsSelect" multiple>
+                <!-- Programming -->
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="Kotlin">Kotlin</option>
+                <option value="TypeScript">TypeScript</option>
+
+                <!-- Frameworks -->
+                <option value="React">React</option>
+                <option value="Angular">Angular</option>
+                <option value="Spring Boot">Spring Boot</option>
+                <option value="Django">Django</option>
+                <option value="Vue">Vue</option>
+
+                <!-- Tools -->
+                <option value="Git">Git</option>
+                <option value="Docker">Docker</option>
+                <option value="Figma">Figma</option>
+                <option value="VS Code">VS Code</option>
+                <option value="Jira">Jira</option>
+
+                <!-- Web -->
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Responsive Design">Responsive Design</option>
+                <option value="Accessibility">Accessibility</option>
+                <option value="SEO">SEO</option>
+            </select>
+
+            <button id="postQuestionBtn">Post Your Question</button>
+        </div>
+
+        <!-- List of All Questions -->
+        <div class="questions-section">
+            <h2>All Questions</h2>
+            <div id="questionsList" class="questions-list">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="authentication.js"></script>
+<script src="questions.js" defer></script>
+</body>
+</html>

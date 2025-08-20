@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DevExchange - Your Profile</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="view-profile">
+
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+    <h2 class="sidebar-title">DevExchange</h2>
+
+    <ul class="nav-links">
+        <li><a class="active" href="view-profile.html">Home</a></li>
+        <li><a href="questions.html">Questions</a></li>
+    </ul>
+
+    <div class="sidebar-bottom">
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+</div>
+
+<!-- Main Content -->
+<main class="main-content">
+    <div class="profile-container">
+        <h1 id="welcomeMessage">Welcome, [username]!</h1>
+        <p class="intro-question">Ready to learn and share today?</p>
+        <button id="readyButton">I'm Ready!</button>
+
+        <div id="dashboard" style="display: none;">
+            <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Can Teach:</strong> <span id="displayShare"></span></p>
+            <p><strong>Wants to Learn:</strong> <span id="displayLearn"></span></p>
+
+            <button id="editProfileBtn">Edit Profile</button>
+
+            <!-- Edit Profile Form -->
+            <div id="editProfileForm" class="card-box" style="display: none; margin-top: 20px;">
+                <h3>Edit Your Profile</h3>
+
+                <label for="editTeach">Can Teach:</label>
+                <select id="editTeach">
+                    <optgroup label="Programming Languages">
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="C#">C#</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Kotlin">Kotlin</option>
+                        <option value="TypeScript">TypeScript</option>
+                    </optgroup>
+                    <optgroup label="Frameworks & Libraries">
+                        <option value="React">React</option>
+                        <option value="Angular">Angular</option>
+                        <option value="Spring Boot">Spring Boot</option>
+                        <option value="Django">Django</option>
+                        <option value="Vue">Vue</option>
+                    </optgroup>
+                    <optgroup label="Tools & Technologies">
+                        <option value="Git">Git</option>
+                        <option value="Docker">Docker</option>
+                        <option value="Figma">Figma</option>
+                        <option value="VS Code">VS Code</option>
+                        <option value="Jira">Jira</option>
+                    </optgroup>
+                    <optgroup label="Web Fundamentals">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Responsive Design">Responsive Design</option>
+                        <option value="Accessibility">Accessibility</option>
+                        <option value="SEO">SEO</option>
+                    </optgroup>
+                </select>
+
+                <label for="editLearn">Wants to Learn:</label>
+                <select id="editLearn">
+                    <optgroup label="Programming">
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="C#">C#</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Kotlin">Kotlin</option>
+                        <option value="TypeScript">TypeScript</option>
+                    </optgroup>
+                    <optgroup label="Frameworks">
+                        <option value="React">React</option>
+                        <option value="Angular">Angular</option>
+                        <option value="Spring Boot">Spring Boot</option>
+                        <option value="Django">Django</option>
+                        <option value="Vue">Vue</option>
+                    </optgroup>
+                    <optgroup label="Tools">
+                        <option value="Git">Git</option>
+                        <option value="Docker">Docker</option>
+                        <option value="Figma">Figma</option>
+                        <option value="VS Code">VS Code</option>
+                        <option value="Jira">Jira</option>
+                    </optgroup>
+                    <optgroup label="Web">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Responsive Design">Responsive Design</option>
+                        <option value="Accessibility">Accessibility</option>
+                        <option value="SEO">SEO</option>
+                    </optgroup>
+                </select>
+
+                <div class="form-buttons">
+                    <button type="submit" id="saveProfileBtn" class="save-btn">Save</button>
+                    <button type="button" id="cancelEditBtn" class="cancel-btn">Cancel</button>
+                </div>
+            </div>
+
+            <div class="card-box">
+                <h3>Connections</h3>
+                <ul id="connectionsList"></ul>
+            </div>
+
+            <div class="card-box">
+                <h3>Pending Connections</h3>
+                <ul id="pendingConnectionsList"></ul>
+            </div>
+
+            <button id="findMatchesButton" class="match-button">Find Matches</button>
+        </div>
+    </div>
+
+    <div id="matchResults" class="card-box" style="display: none; margin-top: 40px;">
+        <h3>Suggested Matches</h3>
+        <ul id="matchesList" class="match-list"></ul>
+    </div>
+</main>
+
+<script src="authentication.js"></script>
+<script src="view-profile.js" defer></script>
+</body>
+</html>

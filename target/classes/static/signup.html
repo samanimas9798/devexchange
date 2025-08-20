@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DevExchange - Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="signup-page">
+<div class="signup-container">
+    <h1>Create Your Profile</h1>
+    <form class="signup-form" id="signupForm" method="post">
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="skillCategory">Tech Skill You Can Share</label>
+        <select id="skillCategory" name="skillCategory" required>
+            <option value="">-- Select a Category --</option>
+            <option value="programming">Programming Languages</option>
+            <option value="frameworks">Frameworks & Libraries</option>
+            <option value="tools">Tools & Technologies</option>
+            <option value="web">Web Fundamentals</option>
+        </select>
+
+        <label for="specificSkill">Specific Skill</label>
+        <select id="specificSkill" name="techToShare" required>
+            <option value="">-- Select a Skill --</option>
+        </select>
+
+        <label for="learnCategory">Tech Skill You Want to Learn</label>
+        <select id="learnCategory" name="learnCategory" required>
+            <option value="">-- Select a Category --</option>
+            <option value="programming">Programming Languages</option>
+            <option value="frameworks">Frameworks & Libraries</option>
+            <option value="tools">Tools & Technologies</option>
+            <option value="web">Web Fundamentals</option>
+        </select>
+
+        <label for="learnSkill">Specific Skill</label>
+        <select id="learnSkill" name="techToLearn" required>
+            <option value="">-- Select a Skill --</option>
+        </select>
+
+        <button type="submit">SIGN UP</button>
+    </form>
+</div>
+
+<script src="signup.js" defer></script>
+</body>
+</html>

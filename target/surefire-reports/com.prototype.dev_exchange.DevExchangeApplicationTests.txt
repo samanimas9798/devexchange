@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.prototype.dev_exchange.DevExchangeApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.354 s -- in com.prototype.dev_exchange.DevExchangeApplicationTests
